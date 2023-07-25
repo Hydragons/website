@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from "next/link"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,42 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+
+
+        <div className="flex">
+          <div className="flex">
+            <a className="btn btn-ghost normal-case text-xl">My Website</a>
+          </div>
+          <div className="flex">
+            <ul className="flex flex-row">
+              <li>
+                <Link href="/">Accueil</Link>
+              </li>
+              <li>
+                <Link href="/equipe">Notre équipe</Link>
+              </li>
+              <li>
+                <Link href="/accomplissements">Accomplissements</Link>
+              </li>
+              <li>
+                <Link href="/rejoindre">Rejoindre le club</Link>
+              </li>
+              <li>
+                <Link href="/photos">Photos</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        {children}
+
+
+      </body>
     </html>
   )
 }
