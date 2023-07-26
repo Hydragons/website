@@ -13,8 +13,17 @@ module.exports = ({
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+
       },
     },
+
+    colors: {
+      'udemBlue': '#0657ac',
+      'white': '#ffffff',
+      'hoverColor': '#f59e0b',
+      transparent: 'transparent',
+      
+    }
   },
   plugins: [],
 })
