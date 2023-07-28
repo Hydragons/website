@@ -10,6 +10,8 @@ import { useEffect, useState} from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const testColor = "bg-red-700"
+
 export default function RootLayout({
   children,
 }: {
@@ -86,15 +88,15 @@ export default function RootLayout({
       </body>
 
 <footer className="relative dark:bg-udemBlue pt-8 pb-6">
-  <div className="container mx-auto px-4">
+  <div className="container mx-auto my-5 px-4">
     <div className="flex flex-wrap text-left lg:text-left">
-      <div className="w-full lg:w-6/12 px-4">
-        <h4 className="text-3xl fonat-semibold text-white">Let's keep in touch!</h4>
-        <h5 className="text-lg mt-0 mb-2 text-white">
-          Find us on any of these platforms, we respond 1-2 business days.
-        </h5>
-      </div>
-      <div className="w-full lg:w-6/12 px-4">
+    <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
+  <h4 className="text-3xl fonat-semibold text-white">Intéressé(e) à joindre l’équipe?</h4>
+  <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-black active:scale-95 focus:outline-none">
+    Contactez-nous
+  </button>
+</div>
+      <div className="w-full mx-auto my-5 lg:w-6/12 px-12">
         <div className="flex flex-wrap items-top mb-6">
           <div className="w-full lg:w-5/12 px-4">
             <span className="block uppercase text-white text-sm font-semibold mb-2">Nos réseaux sociaux</span>
