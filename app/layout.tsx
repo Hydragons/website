@@ -21,6 +21,9 @@ export default function RootLayout({
   return (
 
     <html lang='en'>
+      <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
+      <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+
       <body>
 
 
@@ -81,6 +84,42 @@ export default function RootLayout({
 
 
       </body>
+
+<footer className="relative dark:bg-udemBlue pt-8 pb-6">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-wrap text-left lg:text-left">
+      <div className="w-full lg:w-6/12 px-4">
+        <h4 className="text-3xl fonat-semibold text-white">Let's keep in touch!</h4>
+        <h5 className="text-lg mt-0 mb-2 text-white">
+          Find us on any of these platforms, we respond 1-2 business days.
+        </h5>
+      </div>
+      <div className="w-full lg:w-6/12 px-4">
+        <div className="flex flex-wrap items-top mb-6">
+          <div className="w-full lg:w-5/12 px-4">
+            <span className="block uppercase text-white text-sm font-semibold mb-2">Nos réseaux sociaux</span>
+            <ul className="list-unstyled">
+            <li className="flex items-left pb-2">
+              <button className="bg-white text-pink-600 font-normal h-6 w-6 rounded-full outline-none focus:outline-none mr-2" type="button">
+                <i className="fab fa-instagram"></i>
+              </button>
+              <a className="bg-transparent text-white">@udem.bateaudragon</a>
+            </li>
+            <li className="flex items-left pb-2">
+              <button className="bg-white text-lightBlue-600 font-normal h-6 w-6 rounded-full outline-none focus:outline-none mr-2" type="button">
+                <i className="fab fa-facebook"></i>
+              </button>
+              <a className="bg-transparent text-white">Udem Hydragons</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr className="my-6 border-blueGray-300"/>
+
+  </div>
+</footer>
     </html>
   )
 }
