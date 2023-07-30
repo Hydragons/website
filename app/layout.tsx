@@ -100,19 +100,20 @@ export default function RootLayout({
         <div className="flex flex-wrap items-top mb-6">
           <div className="w-full lg:w-5/12 px-4">
             <span className="block uppercase text-white text-sm font-semibold mb-2">Nos réseaux sociaux</span>
-            <ul className="list-unstyled">
-            <li className="flex items-left pb-2">
-              <button className="bg-white text-pink-600 font-normal h-6 w-6 rounded-full outline-none focus:outline-none mr-2" type="button">
-                <i className="fab fa-instagram"></i>
-              </button>
-              <a className="bg-transparent text-white">@udem.bateaudragon</a>
-            </li>
-            <li className="flex items-left pb-2">
-              <button className="bg-white text-lightBlue-600 font-normal h-6 w-6 rounded-full outline-none focus:outline-none mr-2" type="button">
-                <i className="fab fa-facebook"></i>
-              </button>
-              <a className="bg-transparent text-white">Udem Hydragons</a>
-            </li>
+            {/* Based on this template: https://tailwindcomponents.com/component/footer-9 */}
+            <ul className="list-unstyled text-white">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=100095021042903" className="flex items-center space-x-3 hover:text-udemLightBlue transition">
+                  <i className="fab fa-facebook"></i>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/udem.bateaudragon" className="flex items-center space-x-3 hover:text-udemLightBlue transition">
+                  <i className="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

@@ -21,8 +21,9 @@ module.exports = ({
       'udemBlue': '#0657ac',
       'white': '#ffffff',
       'hoverColor': '#f59e0b',
+      'udemLightBlue': '#aecbeb',
       transparent: 'transparent',
-      
+
     }
   },
   plugins: [],
