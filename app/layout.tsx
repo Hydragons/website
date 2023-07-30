@@ -10,8 +10,6 @@ import { useEffect, useState} from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const testColor = "bg-red-700"
-
 export default function RootLayout({
   children,
 }: {
