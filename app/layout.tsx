@@ -92,7 +92,7 @@ export default function RootLayout({
     <div className="flex flex-wrap text-left lg:text-left">
     <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
   <h4 className="text-3xl fonat-semibold text-white">Intéressé(e) à joindre l’équipe?</h4>
-  <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-black active:scale-95 focus:outline-none">
+  <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
     Contactez-nous
   </button>
 </div>
