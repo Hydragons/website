@@ -20,8 +20,8 @@ module.exports = ({
     colors: {
       'udemBlue': '#06609D',
       'white': '#ffffff',
-      'hoverColor': '#f59e0b',
       'udemLightBlue': '#aecbeb',
+      'currentPage': '#71bedc',
       transparent: 'transparent',
 
     }
