@@ -18,7 +18,7 @@ module.exports = ({
     },
 
     colors: {
-      'udemBlue': '#0657ac',
+      'udemBlue': '#06609D',
       'white': '#ffffff',
       'hoverColor': '#f59e0b',
       'udemLightBlue': '#aecbeb',
