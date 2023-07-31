@@ -33,8 +33,8 @@ export default function RootLayout({ children, } : { children: React.ReactNode }
     </button>
 
 
-    <div className={`w-full lg:block lg:w-auto ${ isMenuOpen ? "" : "hidden"}`} id="navbar-default">
-      <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0">
+    <div className={`w-full lg:block lg:w-auto ${ isMenuOpen ? "" : "hidden"}`}>
+      <ul className="absolute w-full lg:relative font-medium flex flex-col items-center p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0">
         <li>
           <a href="/" className="block py-2 pl-3 pr-4 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white">
             Accueil
