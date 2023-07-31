@@ -21,6 +21,9 @@ export default function RootLayout({
   return (
 
     <html lang='en'>
+      <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
+      <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+
       <body>
 
 
@@ -81,6 +84,43 @@ export default function RootLayout({
 
 
       </body>
+
+<footer className="relative dark:bg-udemBlue pt-8 pb-6">
+  <div className="container mx-auto my-5 px-4">
+    <div className="flex flex-wrap text-left lg:text-left">
+    <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
+  <h4 className="text-3xl fonat-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
+  <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
+    Contactez-nous
+  </button>
+</div>
+      <div className="w-full mx-auto my-5 lg:w-6/12 px-12">
+        <div className="flex flex-wrap items-top mb-6">
+          <div className="w-full lg:w-5/12 px-4">
+            <span className="block uppercase text-white text-sm font-semibold mb-2">Nos réseaux sociaux</span>
+            {/* Based on this template: https://tailwindcomponents.com/component/footer-9 */}
+            <ul className="list-unstyled text-white">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=100095021042903" className="flex items-center space-x-3 hover:text-udemLightBlue transition">
+                  <i className="fab fa-facebook"></i>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/udem.bateaudragon" className="flex items-center space-x-3 hover:text-udemLightBlue transition">
+                  <i className="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr className="my-6 border-blueGray-300"/>
+
+  </div>
+</footer>
     </html>
   )
 }
