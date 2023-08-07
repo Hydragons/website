@@ -26,7 +26,7 @@ export default function RootLayout({
       <body>
 
 
-        <nav className=" dark:bg-udemBlue">
+        <nav className=" bg-udemBlue bg-opacity-90">
           <div className="flex flex-wrap">
 
             {/* FOR WHEN THE SCREEN IS SMALLER, COLLAPSE NAVBAR
