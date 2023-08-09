@@ -1,5 +1,4 @@
-"use client"
-
+'use client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -8,13 +7,10 @@ import { useEffect, useState } from 'react'
 import { usePathname } from "next/navigation"
 
 const inter = Inter({ subsets: ['latin'] })
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-
+        
+export default function RootLayout({ children, } : { children: React.ReactNode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [currentPath, setCurrentPath] = useState<string>('')
   const pathname = usePathname();
 
   return (
@@ -26,58 +22,57 @@ export default function RootLayout({
       <body>
 
 
-        <nav className=" bg-udemBlue bg-opacity-90">
-          <div className="flex flex-wrap">
-
-            {/* FOR WHEN THE SCREEN IS SMALLER, COLLAPSE NAVBAR
-    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+<nav className="bg-udemBlue bg-opacity-90">
+  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" className="flex items-center">
+        <img src="imgs/udemLogo.png" className='h-12 w-15 pr-5' alt="UDEM Dragonboat logo" />
+        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">UdeM BATEAU-DRAGON</span>
+    </a>
+    
+    <button data-collapse-toggle="navbar-default" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
-    </button> */}
+    </button>
 
+<!--       <ul className="absolute w-full lg:relative font-medium flex flex-col items-center p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"> -->
+    <div className={`w-full lg:block lg:w-auto ${ isMenuOpen ? "" : "hidden"}`}>
+      <ul className="flex flex-row text-white text-lg font-normal ml-auto whitespace-nowrap py-4 pr-8">
+        <li>
+          <Link href="/" className={`${pathname === '/' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+            ACCUEIL
+          </Link>
+        </li>
+        <li>
+          <Link href="/equipe" className={`${pathname === '/equipe' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+            NOTRE ÉQUIPE
+          </Link>
+        </li>
+        <li>
+          <Link href="/accomplissements" className={`${pathname === '/accomplissements' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+            ACCOMPLISSEMENTS
+          </Link>
+        </li>
+        <li>
+          <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+            REJOINDRE LE CLUB
+          </Link>
+        </li>
+        <li>
+          <Link href="/photos" className={`${pathname === '/photos' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+            PHOTOS
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact" className={`${pathname === '/contact' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+            CONTACT
+          </Link>
+        </li>
+      </ul>
 
-            <div id="logoAndName" className="flex items-center pl-8">
-              <img src="imgs/udemLogo.png" className='h-12 w-15 pr-5' alt="UDEM Dragonboat logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">UdeM BATEAU-DRAGON</span>
-            </div>
-
-            <ul className="flex flex-row text-white text-lg font-normal ml-auto whitespace-nowrap py-4 pr-8">
-              <li>
-                <Link href="/" className={`${pathname === '/' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                  ACCUEIL
-                </Link>
-              </li>
-              <li>
-                <Link href="/equipe" className={`${pathname === '/equipe' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                  NOTRE ÉQUIPE
-                </Link>
-              </li>
-              <li>
-                <Link href="/accomplissements" className={`${pathname === '/accomplissements' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                  ACCOMPLISSEMENTS
-                </Link>
-              </li>
-              <li>
-                <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                  REJOINDRE LE CLUB
-                </Link>
-              </li>
-              <li>
-                <Link href="/photos" className={`${pathname === '/photos' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                  PHOTOS
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className={`${pathname === '/contact' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                  CONTACT
-                </Link>
-              </li>
-            </ul>
-
-          </div>
-        </nav>
+    </div>
+  </nav>
 
         {children}
 
