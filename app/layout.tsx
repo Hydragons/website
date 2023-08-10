@@ -40,33 +40,33 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
               <ul className="flex flex-row text-white text-lg font-normal ml-auto whitespace-nowrap py-4 pr-8">
                 <li>
-                  <Link href="/" className={`${pathname === '/' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/" className={`${pathname === '/' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCUEIL
                   </Link>
                 </li>
                 <li>
-                  <Link href="/equipe" className={`${pathname === '/equipe' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/equipe" className={`${pathname === '/equipe' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     NOTRE ÉQUIPE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/accomplissements" className={`${pathname === '/accomplissements' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/accomplissements" className={`${pathname === '/accomplissements' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCOMPLISSEMENTS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     REJOINDRE LE CLUB
                   </Link>
                 </li>
                 <li>
-                  <Link href="/photos" className={`${pathname === '/photos' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/photos" className={`${pathname === '/photos' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     PHOTOS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className={`${pathname === '/contact' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                    CONTACT
+                  <Link href="/contact" className={`${pathname === '/contact' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                    CONTACTEZ-NOUS
                   </Link>
                 </li>
               </ul>
@@ -74,16 +74,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           </div>
         </nav>
 
-        <div className='relative z-0 '>
-          <img src="imgs/accueil_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
-          <h1 className="absolute text-7xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
-            CLUB DE BATEAU DRAGON DE L'UNIVERSITÉ DE MONTRÉAL</h1>
-        </div>
-
-        <div className='w-full p-4'>
-          <h1 className='text-center'>À PROPOS DU BATEAU DRAGON</h1>
-
-        </div>
 
         {children}
 
