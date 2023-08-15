@@ -81,7 +81,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           <div className="container mx-auto my-5 px-4">
             <div className="flex flex-wrap text-left lg:text-left">
               <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
-                <h4 className="text-3xl fonat-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
+                <h4 className="text-3xl font-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
                 <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
                   Contactez-nous
                 </button>

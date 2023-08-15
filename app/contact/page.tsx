@@ -9,35 +9,42 @@ export default function Home() {
                     CONTACTEZ-NOUS</h1>
             </div>
 
-            <div className='columns-2 gap-14 p-20 place-content-center'>
+            <div className='grid lg:grid-cols-4 p-20 lg:gap-5 sm:grid-cols-none sm:pt-10 sm:gap-1'>
+                <div></div>
                 <div className='w-full'>
-                    <h1 className='text-udemBlue font-semibold text-right text-3xl mb-2'>Tu as des questions? <div className='whitespace-pre'></div>Écris-nous!</h1>
+                    <h1 className='text-udemBlue font-semibold text-3xl mb-2'>Tu as des questions? <div className='whitespace-pre'></div>Écris-nous!</h1>
+                    <form action="https://api.web3forms.com/submit" id="contact-form" method="POST" className='flex flex-col'>
+                        <input type="hidden" name="access_key" value="b67a0f58-0637-4e9a-a3eb-01619d8b29b0" />
+
+                        <div className="form-group">
+                            <label htmlFor="name">Nom: </label>
+                            <input type="text" name="nom" required className=" form-control rounded-lg border-dashed w-full" />
+                        </div>
+
+                        <input type="hidden" name="from_name" value="New UdeM Website Form"></input>
+                        <input type="checkbox" name="botcheck" className="hidden"></input>
 
 
-                    <form id="contact-form" method="POST" className='flex flex-col text-right'>
-                        <div className="form-group p-2">
-                            <label htmlFor="name">Name: </label>
-                            <input type="text" className="form-control border-dashed" />
+
+                        <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">Adresse courriel : </label>
+                            <input type="email" name="courriel" required className=" form-control rounded-lg border-dashed w-full" aria-describedby="emailHelp" />
                         </div>
-                        <div className="form-group p-2">
-                            <label htmlFor="exampleInputEmail1">Email address: </label>
-                            <input type="email" className="form-control border-dashed" aria-describedby="emailHelp" />
+                        <div className="form-group">
+                            <label htmlFor="message" className="block mb-2"></label>
+                            <textarea id="message" name="message" rows="4" className=" w-full ml-auto block mb-3 rounded-lg border border-dashed focus:ring-udemBlue-500 focus:border-udemBlue-500" placeholder="Ton message..."></textarea>
                         </div>
-                        <div className="form-group p-2">
-                            <label for="message" className="block mb-2">Ton message</label>
-                            <textarea id="message" rows="2" className="ml-auto w-2/5 block p-2 mb-2 rounded-lg border border-dashed focus:ring-udemBlue-500 focus:border-udemBlue-500" placeholder=""></textarea>
-                        </div>
-                        <button className="border-2 border-udemBlue text-udemBlue rounded-md text-right p-2 ml-auto hover:bg-udemBlue hover:text-white active:scale-95 focus:outline-none">
+                        <button className="border-2 border-udemBlue text-udemBlue rounded-md p-2 place-self-center w-2/6 hover:bg-udemBlue hover:text-white active:scale-95 focus:outline-none transition-colors">
                             Envoyer
                         </button>
 
                     </form>
 
-
+                    <script src="https://web3forms.com/client/script.js" async defer></script>
 
                 </div>
-                <img className='max-w-xl border-dashed border-8 border-udemBlue' src="imgs/contact_pic1.png" alt="Picture of UdeM Team" />
-
+                <img className='max-w-xl sm:place-self-center lg:w-full md:place-self-center' src="imgs/kaizenbanner.png" alt="Picture of UdeM Team" />
+                <div></div>
 
             </div>
         </div>
