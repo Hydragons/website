@@ -21,12 +21,12 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" />
 
       <body>
-        <nav className=" bg-udemBlue bg-opacity-90">
+        <nav className=" bg-udemBlue bg-opacity-70 absolute z-10 w-screen">
           <div className="flex flex-wrap">
 
             <div id="logoAndName" className="flex items-center pl-8">
               <img src="imgs/udemLogo.png" className='h-12 w-15 pr-5' alt="UDEM Dragonboat logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">UdeM BATEAU-DRAGON</span>
+              <span className="self-center text-xl font-normal whitespace-nowrap text-white tracking-tight">HYDRAGONS</span>
             </div>
 
             <button data-collapse-toggle="navbar-default" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -40,33 +40,33 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
               <ul className="flex flex-row text-white text-lg font-normal ml-auto whitespace-nowrap py-4 pr-8">
                 <li>
-                  <Link href="/" className={`${pathname === '/' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/" className={`${pathname === '/' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCUEIL
                   </Link>
                 </li>
                 <li>
-                  <Link href="/equipe" className={`${pathname === '/equipe' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/equipe" className={`${pathname === '/equipe' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     NOTRE ÉQUIPE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/accomplissements" className={`${pathname === '/accomplissements' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/accomplissements" className={`${pathname === '/accomplissements' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCOMPLISSEMENTS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     REJOINDRE LE CLUB
                   </Link>
                 </li>
                 <li>
-                  <Link href="/photos" className={`${pathname === '/photos' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/photos" className={`${pathname === '/photos' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     PHOTOS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className={`${pathname === '/contact' ? 'text-currentPage' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                    CONTACT
+                  <Link href="/contact" className={`${pathname === '/contact' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                    CONTACTEZ-NOUS
                   </Link>
                 </li>
               </ul>
@@ -80,7 +80,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           <div className="container mx-auto my-5 px-4">
             <div className="flex flex-wrap text-left lg:text-left">
               <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
-                <h4 className="text-3xl fonat-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
+                <h4 className="text-3xl font-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
                 <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
                   Contactez-nous
                 </button>
