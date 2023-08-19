@@ -74,7 +74,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           </div>
         </nav>
 
-
         {children}
 
         <footer className="relative dark:bg-udemBlue pt-8 pb-6">
