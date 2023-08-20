@@ -5,7 +5,7 @@ export default function Home() {
         <div>
             <div className='relative z-0 '>
                 <img src="imgs/accomplissements_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
-                <h1 className="absolute text-7xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
+                <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     ACCOMPLISSEMENTS</h1>
             </div>
 
