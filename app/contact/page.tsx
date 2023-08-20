@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div className=''>
             <div className='relative z-0 '>
-                <img src="imgs/contact_MainPic.jpg" className='brightness-75 w-full' alt="Accueil Image" />
+                <img src="imgs/contact_MainPic.jpg" className='bg-photo' alt="Accueil Image" />
                 <h1 className="absolute text-7xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     CONTACTEZ-NOUS</h1>
             </div>

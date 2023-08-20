@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div>
             <div className='relative z-0 '>
-                <img src="imgs/photos_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
+                <img src="imgs/photos_MainPic.jpg" className='bg-photo' alt="Accueil Image" />
                 <h1 className="absolute text-7xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     PHOTOS</h1>
             </div>

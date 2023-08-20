@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div>
             <div className="bg-video">
-                <video className="bg-video__content brightness-90" autoPlay muted loop src="imgs/equipe_MainVid.mp4">
+                <video className="bg-photo" autoPlay muted loop src="imgs/equipe_MainVid.mp4">
                 </video>
                 <h1 className="absolute text-7xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     NOTRE ÉQUIPE</h1>
