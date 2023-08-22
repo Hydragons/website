@@ -19,9 +19,12 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     <html lang='en'>
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css" />
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+      
 
       <body>
-        <nav className=" bg-udemBlue bg-opacity-70 absolute z-10 w-screen">
+        <nav className=" bg-udemBlue lg:bg-opacity-70 md:bg-opacity-95 sm:bg-opacity-95 absolute z-10 w-screen">
           <div className="flex flex-wrap">
 
             <div id="logoAndName" className="flex items-center pl-8">
@@ -29,7 +32,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
               <span className="self-center text-xl font-normal whitespace-nowrap text-white tracking-tight">HYDRAGONS</span>
             </div>
 
-            <button data-collapse-toggle="navbar-default" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <button data-collapse-toggle="navbar-default" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto" aria-controls="navbar-default" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
@@ -38,7 +41,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
             <div className={`w-full lg:block lg:w-auto ml-auto flex ${isMenuOpen ? "" : "hidden"}`}>
 
-              <ul className="flex flex-row text-white text-lg font-normal ml-auto whitespace-nowrap py-4 pr-8">
+              <ul className="flex lg:flex-row md:flex-col md:mx-auto sm:mx-auto md:text-center sm:flex-col sm:text-center text-white lg:text-lg md:text-base sm:text-sm font-normal lg:ml-auto md:mr-auto sm:mr-auto whitespace-nowrap py-4 pr-8">
                 <li>
                   <Link href="/" className={`${pathname === '/' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCUEIL
@@ -76,14 +79,16 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
         {children}
 
-        <footer className="relative dark:bg-udemBlue pt-8 pb-6">
+        <footer className="relative bg-udemBlue pt-8 pb-6">
           <div className="container mx-auto my-5 px-4">
-            <div className="flex flex-wrap text-left lg:text-left">
+            <div className="flex flex-wrap text-left"> 
               <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
                 <h4 className="text-3xl font-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
+                <Link href="/contact" >
                 <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
                   Contactez-nous
                 </button>
+                </Link>
               </div>
               <div className="w-full mx-auto my-5 lg:w-6/12 px-12">
                 <div className="flex flex-wrap items-top mb-6">
@@ -112,6 +117,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
           </div>
         </footer>
+        
       </body>
 
 
