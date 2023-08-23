@@ -21,7 +21,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-      
 
       <body>
         <nav className=" bg-udemBlue lg:bg-opacity-70 md:bg-opacity-95 sm:bg-opacity-95 absolute z-10 w-screen">
