@@ -13,17 +13,25 @@ export default function Home() {
                     rejoindre le club</h1>
             </div>
 
-            <div className='w-full p-4'>
-                <h1 className='uppercase text-left'>à propos du club</h1>
+            <div className='w-full pt-10 pl-32 pr-32 pb-5'>
+                <h2 className='text-udemBlue font-semibold text-3xl mb-2 uppercase'>à propos du club</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam fugiat suscipit 
+                    ipsam dolorem odio laudantium iste minima delectus natus quia, maiores cum tempore? 
+                    Incidunt aliquid doloribus, accusamus odio perferendis unde. Lorem ipsum dolor sit amet c
+                    onsectetur adipisicing elit. Cupiditate, nihil inventore! Unde dignissimos dolor assumenda! 
+                    Delectus sapiente quas ratione itaque laudantium quidem. Omnis, doloremque in voluptates dolorem d
+                    olores tempora quo!</p>
             </div>
 
-            <div className='grid grid-cols-2 '>
+            <div className='grid grid-cols-2 pt-10 '>
 
-                <div className=''>
-                   <h2>ou ets le bclu</h2>
+                <div className='w-full text-center'>
+                <h2 className='text-udemBlue font-semibold text-3xl mb-2 uppercase'>où est le club</h2>
+                <ul><li>Adresse: </li>
+                <li></li></ul>
                 </div>
 
-                <div className=''>
+                <div className='pr-32 pt-5'>
                     <Map/>
                 </div>
             </div>
