@@ -25,6 +25,8 @@ module.exports = withMT({
       'udemLightBlue': '#aecbeb',
       'currentPage': '#71bedc',
       transparent: 'transparent',
+      'summer': '#ff6600',
+      'winter': '#68BBE3',
 
     }
   },

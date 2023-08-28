@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css';
+import { icon } from 'leaflet';
 
 export default function Map() {
   const mapContainer = useRef(null);
@@ -21,8 +22,14 @@ export default function Map() {
       zoom: zoom
     });
 
-    new maplibregl.Marker({color: "#FF0000"})
-    .setLngLat([-73.59648779185818, 45.463880377238084])
+    //winter location
+    new maplibregl.Marker({color: "#66ccff"})
+    .setLngLat([-73.59484099876273, 45.46375924091796])
+    .addTo(map.current);
+
+  //summer location
+    new maplibregl.Marker({color: "#ff6600"})
+    .setLngLat([-73.596964, 45.463773])
     .addTo(map.current);
 
   }, [API_KEY, lng, lat, zoom]);
