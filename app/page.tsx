@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <div className='relative z-0'>
-        <img src="imgs/accueil_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
+        <img src="imgs/accueil_MainPic.jpg" className='brightness-75 ' alt="Accueil Image" />
         <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
           CLUB DE BATEAU DRAGON DE L'UNIVERSITÉ DE MONTRÉAL</h1>
       </div>

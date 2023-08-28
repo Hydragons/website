@@ -40,7 +40,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
             <div className={`w-full lg:block lg:w-auto ml-auto flex ${isMenuOpen ? "" : "hidden"}`}>
 
-              <ul className="flex lg:flex-row md:flex-col md:mx-auto sm:mx-auto md:text-center sm:flex-col sm:text-center text-white lg:text-lg md:text-base sm:text-sm font-normal lg:ml-auto md:mr-auto sm:mr-auto whitespace-nowrap py-4 pr-8">
+              <ul className="flex lg:flex-row md:flex-col md:mx-auto sm:mx-auto md:text-center sm:flex-col sm:text-center text-white lg:text-lg md:text-base sm:text-sm font-normal lg:ml-auto md:mr-auto sm:mr-auto whitespace-nowrap py-4 pr-8" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <li>
                   <Link href="/" className={`${pathname === '/' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCUEIL
@@ -57,8 +57,8 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rejoindre" className={`${pathname === '/rejoindre' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                    REJOINDRE LE CLUB
+                  <Link href="/club" className={`${pathname === '/rejoindre' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                    LE CLUB
                   </Link>
                 </li>
                 <li>

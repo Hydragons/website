@@ -16,12 +16,28 @@ body {
     position: relative;
     width: 50%;
     height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
-    padding: 15px;
-    margin-bottom: 20px;
   }
   
   .map {
     position: absolute;
     width: 450px;
     height: 450px;
+  }
+
+  @media screen and (max-width: 1220px) {
+    .map{
+      position: relative;
+    width: 400px;
+    height: 400px;
+
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .map{
+      position: relative;
+    width: 375px;
+    height: 375px;
+
+    }
   }
