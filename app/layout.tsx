@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import { usePathname } from "next/navigation"
 import Head from 'next/head'
 import Image from 'next/image'
+import { Parallax } from 'react-parallax'
 
 const inter = Inter({ subsets: ['latin'] })
 

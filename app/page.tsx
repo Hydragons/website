@@ -9,7 +9,28 @@ export default function Home() {
         <h1 className="absolute text-7xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
           CLUB DE BATEAU DRAGON DE L'UNIVERSITÉ DE MONTRÉAL</h1>
       </div>
-      <Parallax>
+      <Parallax
+        bgImage={image1}
+        bgImageAlt="the cat"
+        strength={200}
+        renderLayer={percentage => (
+          <div>
+            <div
+              style={{
+                position: 'absolute',
+                background: `rgba(255, 125, 0, ${percentage * 1})`,
+                left: '50%',
+                top: '50%',
+                borderRadius: '50%',
+                transform: 'translate(-50%,-50%)',
+                width: percentage * 500,
+                height: percentage * 500,
+              }}
+            />
+          </div>
+        )}
+      >
+        The cat
       </Parallax>
 
       <div className='w-full p-4'>
