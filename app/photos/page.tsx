@@ -19,7 +19,7 @@ export default function Home() {
 
                 <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-1/4 h-1 my-8 border-0  bg-udemLightBlue" />
-                    <span className="absolute px-3 text-center uppercase text-udemBlue font-base text-2xl -translate-x-1/2 bg-white left-1/2 ">saison été 2023</span>
+                    <span className="absolute px-3 text-center uppercase text-udemBlue font-semibold text-3xl -translate-x-1/2 bg-white left-1/2 ">saison été 2023</span>
                 </div>
                 <Carousel className="rounded-xl flex items-center w-1/2 mx-auto max-w-md pt-5" loop={true}>
                     <img

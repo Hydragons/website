@@ -18,7 +18,7 @@ export default function Home() {
 
                         <div className="form-group">
                             <label htmlFor="name">Nom: </label>
-                            <input type="text" name="nom" required className=" form-control rounded-lg border-dashed w-full" />
+                            <input type="text" name="nom" required className=" form-control rounded-lg border-dashed border-udemBlue border-2 w-full" />
                         </div>
 
                         <input type="hidden" name="from_name" value="New UdeM Website Form"></input>
@@ -28,11 +28,11 @@ export default function Home() {
 
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Adresse courriel : </label>
-                            <input type="email" name="courriel" required className=" form-control rounded-lg border-dashed w-full" aria-describedby="emailHelp" />
+                            <input type="email" name="courriel" required className=" form-control rounded-lg border-dashed border-udemBlue border-2 w-full" aria-describedby="emailHelp" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="message" className="block mb-2"></label>
-                            <textarea id="message" name="message" rows="4" className=" w-full ml-auto block mb-3 rounded-lg border border-dashed focus:ring-udemBlue-500 focus:border-udemBlue-500" placeholder="Ton message..."></textarea>
+                            <textarea id="message" name="message" rows="4" className=" w-full ml-auto block mb-3 rounded-lg border-udemBlue border-2 border-dashed " placeholder="Ton message..."></textarea>
                         </div>
                         <button className="border-2 border-udemBlue text-udemBlue rounded-md p-2 place-self-center w-2/6 hover:bg-udemBlue hover:text-white active:scale-95 focus:outline-none transition-colors">
                             Envoyer

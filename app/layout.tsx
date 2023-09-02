@@ -59,7 +59,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                   </Link>
                 </li>
                 <li>
-                  <Link href="/club" className={`${pathname === '/rejoindre' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
+                  <Link href="/club" className={`${pathname === '/club' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     LE CLUB
                   </Link>
                 </li>
@@ -82,13 +82,13 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
         <footer className="relative bg-udemBlue pt-8 pb-6">
           <div className="container mx-auto my-5 px-4">
-            <div className="flex flex-wrap text-left"> 
+            <div className="flex flex-wrap text-left">
               <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
                 <h4 className="text-3xl font-semibold text-white">Intéressé(e) à rejoindre l’équipe?</h4>
                 <Link href="/contact" >
-                <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
-                  Contactez-nous
-                </button>
+                  <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
+                    Contactez-nous
+                  </button>
                 </Link>
               </div>
               <div className="w-full mx-auto my-5 lg:w-6/12 px-12">
@@ -118,7 +118,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
           </div>
         </footer>
-        
+
       </body>
 
 

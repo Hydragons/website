@@ -9,10 +9,105 @@ export default function Home() {
                     ACCOMPLISSEMENTS</h1>
             </div>
 
-            <div className='w-full p-4'>
-                <h1 className='text-left'>SAISON ÉTÉ 2023</h1>
+            <div className="inline-flex items-center justify-center w-full py-10">
+                <hr className="w-1/4 h-1 my-8 border-0  bg-udemLightBlue" />
+                <span className="absolute px-3 text-center uppercase text-udemBlue font-semibold text-3xl -translate-x-1/2 bg-white left-1/2 ">saison été 2023</span>
+            </div>
+
+            <div className='grid lg:grid-cols-2 lg:pb-16 sm:grid-cols-none md:grid-cols-2 md:pb-10 sm:pd-5'>
+
+                <div className='w-2/3 sm:place-self-center lg:ml-auto md:ml-auto sm:ml-0 sm:pb-10'>
+                    <img src="comp/summer2023/LKO.jpg" alt="LKO image" className='border-4 border-udemLightBlue border-solid' />
+                </div>
+
+                <div className='text-left lg:mr-auto lg:my-auto md:mx-0 sm:mx-0 md:ml-10 sm:ml-10 sm:pb-10 '>
+                    <h3 className='pb-5 text-2xl ml-5 font-semibold'>Lachine Knockout</h3>
+                    <h4 className='pb-5 font-semibold text-xl ml-10'>200m</h4>
+                    <ul className='list-disc pl-5 ml-14'>
+                        <li className='pb-5 text-xl'>Bateau Kai: Argent dans la catégorie étudiante (0:51.82)</li>
+                    </ul>
+                </div>
 
             </div>
+
+            <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto sm:hidden md:block lg:block" />
+
+            <div className='grid lg:grid-cols-2 lg:pb-16 sm:grid-cols-none md:grid-cols-2 md:pb-10 sm:pd-5'>
+
+                <div className='w-2/3 sm:place-self-center lg:ml-auto md:ml-auto sm:ml-0 sm:pb-10'>
+                    <img src="comp/summer2023/BC.png" alt="Battle at the Canal image" className='border-4 border-udemLightBlue border-solid' />
+                </div>
+
+                <div className='text-left lg:mr-auto lg:my-auto md:mx-0 sm:mx-0 md:ml-10 sm:ml-10 sm:pb-10 '>
+                    <h3 className='pb-5 text-2xl ml-5 font-semibold'>Battle at the Canal</h3>
+                    <h4 className='pb-5 font-semibold text-xl ml-10'>Relais final</h4>
+                    <ul className='list-disc pl-5 ml-14'>
+                        <li className='pb-5 text-xl'>Bateau Kai: Bronze dans le relais final étudiant</li>
+                        <li className='pb-5 text-xl'>Bateau Zen: Argent dans le relais final étudiant</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto sm:hidden md:block lg:block" />
+
+            <div className='grid lg:grid-cols-2 lg:pb-16 sm:grid-cols-none md:grid-cols-2 md:pb-10 sm:pd-5'>
+
+                <div className='w-2/3 sm:place-self-center lg:ml-auto md:ml-auto sm:ml-0 sm:pb-10'>
+                    <img src="comp/summer2023/MC.JPG" alt="Montreal Challenge image" className='border-4 border-udemLightBlue border-solid' />
+                </div>
+
+                <div className='text-left lg:mr-auto lg:my-auto md:mx-0 sm:mx-0 md:ml-10 sm:ml-10 sm:pb-10 '>
+                    <h3 className='pb-5 text-2xl ml-5 font-semibold'>MTL Challenge</h3>
+
+                    <h4 className='pb-5 font-semibold text-xl ml-10'>200m</h4>
+                    <ul className='list-disc pl-5 ml-14'>
+                        <li className='pb-5 text-xl'>Bateau Kai: 6e dans la catégorie sports mixte
+                            finale C (0:53.23)</li>
+                        <li className='pb-5 text-xl'>Bateau Zen: Or dans la catégorie sports mixte
+                            finale D (0:52.41)</li>
+                    </ul>
+
+                    <h4 className='pb-5 font-semibold text-xl ml-10'>500m</h4>
+                    <ul className='list-disc pl-5 ml-14'>
+                        <li className='pb-5 text-xl'>Bateau Kai: 5e dans la catégorie sports mixte
+                            finale C (2:14.16)</li>
+                        <li className='pb-5 text-xl'>Bateau Zen: Argent dans la catégorie sports mixte
+                            finale D (2:14.96)</li>
+                    </ul>
+
+                    <h4 className='pb-5 font-semibold text-xl ml-10'>2000m</h4>
+                    <ul className='list-disc pl-5 ml-14'>
+                        <li className='pb-5 text-xl'>Bateau Kai: 3e dans la catégorie étudiante (11:05.05)</li>
+                        <li className='pb-5 text-xl'>Bateau Zen: 6e dans la catégorie étudiante (11:47.43)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto sm:hidden md:block lg:block" />
+
+            <div className='grid lg:grid-cols-2 lg:pb-16 sm:grid-cols-none md:grid-cols-2 md:pb-10 sm:pd-5'>
+
+                <div className='w-2/3 sm:place-self-center lg:ml-auto md:ml-auto sm:ml-0 sm:pb-10'>
+                    <img src="comp/summer2023/Rawdon.png" alt="Rawdon image" className='border-4 border-udemLightBlue border-solid' />
+                </div>
+
+                <div className='text-left lg:mr-auto lg:my-auto md:mx-0 sm:mx-0 md:ml-10 sm:ml-10 sm:pb-10 '>
+                    <h3 className='pb-5 text-2xl ml-5 font-semibold'>Rawdon</h3>
+
+                    <h4 className='pb-5 font-semibold text-xl ml-10'>400m</h4>
+                    <ul className='list-disc pl-5 ml-14'>
+                        <li className='pb-5 text-xl'>Bateau Kai: 2e dans la petite finale étudiante (1:53.42)</li>
+                        <li className='pb-5 text-xl'>Bateau Zen: Or dans la grande finale étudiante (1:48.22)</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
         </div>
     )
 }
