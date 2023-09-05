@@ -9,9 +9,9 @@ export default function Home() {
                     CONTACTEZ-NOUS</h1>
             </div>
 
-            <div className='grid lg:grid-cols-4 p-20 lg:gap-5 sm:grid-cols-none sm:pt-10 sm:gap-1'>
+            <div className='grid lg:grid-cols-4 p-20 lg:gap-5 grid-cols-none pt-10 gap-1'>
                 <div></div>
-                <div className='w-full'>
+                <div className='lg:w-full'>
                     <h1 className='text-udemBlue font-semibold text-3xl mb-2'>Tu as des questions? <div className='whitespace-pre'></div>Écris-nous!</h1>
                     <form action="https://api.web3forms.com/submit" id="contact-form" method="POST" className='flex flex-col'>
                         <input type="hidden" name="access_key" value="b67a0f58-0637-4e9a-a3eb-01619d8b29b0" />
@@ -43,7 +43,7 @@ export default function Home() {
                     <script src="https://web3forms.com/client/script.js" async defer></script>
 
                 </div>
-                <img className='max-w-xl sm:place-self-center lg:w-full md:place-self-center' src="imgs/kaizenbanner.png" alt="Picture of UdeM Team" />
+                <img className='lg:max-w-xl sm:place-self-center lg:w-full md:place-self-center ' src="imgs/kaizenbanner.png" alt="Picture of UdeM Team" />
                 <div></div>
 
             </div>

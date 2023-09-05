@@ -25,7 +25,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
       </Head>
 
       <body>
-        <nav className=" bg-udemBlue lg:bg-opacity-70 md:bg-opacity-95 sm:bg-opacity-95 absolute z-10 w-screen">
+        <nav className=" bg-udemBlue lg:bg-opacity-70 bg-opacity-95 absolute z-10 w-full">
           <div className="flex flex-wrap">
 
             <div id="logoAndName" className="flex items-center pl-8">
@@ -34,7 +34,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
             </div>
 
             <button data-collapse-toggle="navbar-default" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto" aria-controls="navbar-default" aria-expanded="false">
-              <span className="sr-only">Open main menu</span>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
               </svg>
@@ -42,7 +41,10 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
             <div className={`w-full lg:block lg:w-auto ml-auto flex ${isMenuOpen ? "" : "hidden"}`}>
 
-              <ul className="flex lg:flex-row md:flex-col md:mx-auto sm:mx-auto md:text-center sm:flex-col sm:text-center text-white lg:text-lg md:text-base sm:text-sm font-normal lg:ml-auto md:mr-auto sm:mr-auto whitespace-nowrap py-4 pr-8" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <ul className="flex lg:flex-row lg:text-lg lg:ml-auto
+              md:flex-col md:mx-auto md:text-center md:text-sm md:mr-auto
+              flex-col mx-auto text-center text-base mr-auto
+              text-white font-normal whitespace-nowrap py-4 pr-8" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <li>
                   <Link href="/" className={`${pathname === '/' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
                     ACCUEIL
