@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Iframe from 'react-iframe'
 import { IBM_Plex_Sans } from 'next/font/google'
 
 
@@ -28,7 +29,13 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <img src="comp/summer2023/LKO.jpg" alt="LKO image" className='border-4 border-udemLightBlue border-solid' />
+                <Iframe url="https://www.youtube.com/embed/zjvl02xac7s"
+                width="640px"
+                height="320px"
+                id=""
+                className="w-2/3"
+                display="block"
+                position="relative"/>
                 </div>
 
                 <div className='text-left lg:mr-auto lg:my-auto md:mx-0 mx-0 md:ml-10 ml-10 pb-10'>
@@ -42,12 +49,12 @@ export default function Home() {
             {/* Add quote here */}
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
-              <div className='place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <h3 className={`${quote.className} ${quote.style} text-4xl pb-2`}>DON'T BE A SHEEP,<br/> BE AN UNDERDOG.</h3>
+              <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
+                    <h3 className={`${quote.className} ${quote.style} text-4xl pb-2`}>DON'T BE A SHEEP, BE AN UNDERDOG.</h3>
                     <h4 className='pb-5 text-xl ml-10 italic'>-Alicia Nguy, Capitaine 2023</h4>
               </div>
 
-                <div className='pl-10 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
+                <div className='pl-10 place-self-center w-2/3'>
                     <img src="comp/summer2023/BC.png" alt="Battle at the Canal image" className='border-4 border-udemLightBlue border-solid' />
                 </div>
 
@@ -60,34 +67,21 @@ export default function Home() {
             {/* Add events here */}
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
-                <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <img src="comp/summer2023/MC.JPG" alt="Montreal Challenge image" className='border-4 border-udemLightBlue border-solid' />
-                </div>
-
-                <div className='text-left lg:mr-auto lg:my-auto md:mx-0 mx-0 md:ml-10 ml-10 pb-10 '>
-                    <h3 className='pb-5 text-2xl ml-5 font-semibold'>MTL Challenge</h3>
+                <div className='place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
+                    <h3 className='absolute px-3 text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl bg-white'>
+                      ÉVÉNEMENTS À VENIR
+                      </h3>
 
                     <h4 className='pb-5 font-semibold text-xl ml-10'>200m</h4>
                     <ul className='list-disc pl-5 ml-14'>
-                        <li className='pb-5 text-xl'>Bateau Kai: 6e dans la catégorie sports mixte
-                            finale C (0:53.23)</li>
+                        <li className='pb-5 text-xl'>Compétition</li>
                         <li className='pb-5 text-xl'>Bateau Zen: Or dans la catégorie sports mixte
                             finale D (0:52.41)</li>
                     </ul>
+                </div>
 
-                    <h4 className='pb-5 font-semibold text-xl ml-10'>500m</h4>
-                    <ul className='list-disc pl-5 ml-14'>
-                        <li className='pb-5 text-xl'>Bateau Kai: 5e dans la catégorie sports mixte
-                            finale C (2:14.16)</li>
-                        <li className='pb-5 text-xl'>Bateau Zen: Argent dans la catégorie sports mixte
-                            finale D (2:14.96)</li>
-                    </ul>
-
-                    <h4 className='pb-5 font-semibold text-xl ml-10'>2000m</h4>
-                    <ul className='list-disc pl-5 ml-14'>
-                        <li className='pb-5 text-xl'>Bateau Kai: 3e dans la catégorie étudiante (11:05.05)</li>
-                        <li className='pb-5 text-xl'>Bateau Zen: 6e dans la catégorie étudiante (11:47.43)</li>
-                    </ul>
+                <div className='w-2/3 pl-10 place-self-center'>
+                    <img src="comp/summer2023/MC.JPG" alt="Montreal Challenge image" className='border-4 border-udemLightBlue border-solid' />
                 </div>
 
             </div>
