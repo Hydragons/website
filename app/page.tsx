@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Iframe from 'react-iframe'
 import { IBM_Plex_Sans } from 'next/font/google'
+import Card from './components/eventsmanager'
 
 
 const quote = IBM_Plex_Sans({
@@ -68,22 +69,11 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <h3 className='absolute px-3 text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl bg-white'>
+                    <h3 className='place-self-center text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl bg-white'>
                       ÉVÉNEMENTS À VENIR
-                      </h3>
-
-                    <h4 className='pb-5 font-semibold text-xl ml-10'>200m</h4>
-                    <ul className='list-disc pl-5 ml-14'>
-                        <li className='pb-5 text-xl'>Compétition</li>
-                        <li className='pb-5 text-xl'>Bateau Zen: Or dans la catégorie sports mixte
-                            finale D (0:52.41)</li>
-                    </ul>
+                    </h3>
                 </div>
-
-                <div className='w-2/3 pl-10 place-self-center'>
-                    <img src="comp/summer2023/MC.JPG" alt="Montreal Challenge image" className='border-4 border-udemLightBlue border-solid' />
-                </div>
-
+                <Card imgUrl={'hihi'} imgTitle={'hihi'} title={'hihi'} excerpt={'hihiahwodihaiwhd'} likes={0}></Card>
             </div>
     </div>
   )
