@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import Iframe from 'react-iframe'
 import { IBM_Plex_Sans } from 'next/font/google'
-import Card from './components/eventsmanager'
-
+import EventsComponent from './components/eventsmanager'
+import { Event } from './components/eventsmanager'
 
 const quote = IBM_Plex_Sans({
   subsets: ['latin'],
   weight: ['300', '700'],
   style: ['italic'],
 });
+
+var events: Event[] = [{title:"Discovery day", date:new Date("2023-08-21")}, {title:"DBoat Festival", date:new Date("2024-02-14")}]
 
 export default function Home() {
   return (
@@ -66,14 +68,14 @@ export default function Home() {
             <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto md:block lg:block" />
             
             {/* Add events here */}
-            <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
+            <div>
 
-                <div className='place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
+                <div className='lg:ml-auto md:ml-auto ml-0 pb-10'>
                     <h3 className='place-self-center text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl bg-white'>
                       ÉVÉNEMENTS À VENIR
                     </h3>
                 </div>
-                <Card imgUrl={'hihi'} imgTitle={'hihi'} title={'hihi'} excerpt={'hihiahwodihaiwhd'} likes={0}></Card>
+                <EventsComponent events={events} ></EventsComponent>
             </div>
     </div>
   )

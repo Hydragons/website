@@ -1,16 +1,29 @@
 'use client';
-interface CardProps {
-    imgUrl: string;
-    imgTitle: string;
-    title: string;
-    excerpt: string;
-    likes: number;
+interface EventsContent {
+    events: Event[]
  }
 
- export default function Card(props: CardProps) {
+ export interface Event {
+  title: string;
+  date: Date;
+ }
 
-    function print(props: CardProps) {
-        console.log(`This is the image title: ${props.title}`)
+ function EventCard(eventDetails: Event){
+  return (
+    <div className="flow-root">
+      <div className="float-left m-2">
+        <h1 className="text-2xl">{eventDetails.date.getDate()}</h1>
+        <h1 className="text-lg">{eventDetails.date.toLocaleString('default', { month: 'long' }).slice(0,3)}</h1>
+      </div>
+      <h1 className="float-left m-2 text-3xl">{eventDetails.title}</h1>
+    </div>
+  )
+ }
+
+ export default function EventsComponent(events: EventsContent) {
+
+    function print(timeRange:string) {
+        console.log(`${timeRange}`)
     }
 
     const TODAY = "today";
@@ -23,20 +36,20 @@ interface CardProps {
     const timeRanges: string[] = [TODAY, WEEK, NEXT_WEEK, MONTH, NEXT_MONTH, ALL]
 
     const timeCards = timeRanges.map((timeRange, index) => (
-        <div key={index}>
-          <h2>{timeRange}</h2>
-        </div>
+        <div onClick={() => print(timeRange)} key={index} className="text-lg font-medium float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-200 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
+          {timeRange}</div>
       ));
 
+    const eventCards = events.events.map((event, index) => (
+      <EventCard title={event.title} date={event.date}></EventCard>
+    ));
+
      return (
-           <div onClick={() => print(props)}>
-             <img src={props.imgUrl} alt={props.imgTitle} />
-              <h1>{props.title}</h1>
-              <p>{props.excerpt}</p>
-              <p>{props.likes}</p>
-                <div>
-                    {timeCards}
-                </div>
+           <div>
+              <div className="flow-root">
+                  {timeCards}
+              </div>
+              {eventCards}
            </div>
           )
   }
