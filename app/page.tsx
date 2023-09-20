@@ -10,7 +10,12 @@ const quote = IBM_Plex_Sans({
   style: ['italic'],
 });
 
-var events: Event[] = [{title:"Discovery day", date:new Date("2023-08-21")}, {title:"DBoat Festival", date:new Date("2024-02-14")}]
+function addDate(dateString: string) {
+  const NEW_YORK_OFFSET = -5 * 60
+  return new Date(new Date(dateString).getTime() - NEW_YORK_OFFSET * 60 * 1000);
+}
+// const newYorkDate = new Date(utcDate.getTime() - newYorkOffset * 60 * 1000);
+var events: Event[] = [{title:"Discovery day", date:addDate("2023-08-01")}, {title:"DBoat Festival", date:addDate("2024-02-13")}]
 
 export default function Home() {
   return (
@@ -68,15 +73,14 @@ export default function Home() {
             <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto md:block lg:block" />
             
             {/* Add events here */}
-            <div>
-
-                <div className='lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <h3 className='place-self-center text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl bg-white'>
-                      ÉVÉNEMENTS À VENIR
-                    </h3>
-                </div>
-                <EventsComponent events={events} ></EventsComponent>
-            </div>
+            
+          <div className="flex flex-col items-center justify-center">
+            <h3 className="text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl bg-white">
+              ÉVÉNEMENTS À VENIR
+            </h3>
+            <EventsComponent events={events}></EventsComponent>
+          </div>
+                
     </div>
   )
 }

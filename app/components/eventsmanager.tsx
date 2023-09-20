@@ -12,10 +12,13 @@ interface EventsContent {
   return (
     <div className="flow-root">
       <div className="float-left m-2">
-        <h1 className="text-2xl">{eventDetails.date.getDate()}</h1>
-        <h1 className="text-lg">{eventDetails.date.toLocaleString('default', { month: 'long' }).slice(0,3)}</h1>
+        <h1 className="text-4xl">{eventDetails.date.getDate()}</h1>
+        <h1 className="text-lg font-light">{eventDetails.date.toLocaleString('default', {month: 'long' }).slice(0,3)}</h1>
       </div>
-      <h1 className="float-left m-2 text-3xl">{eventDetails.title}</h1>
+      <div className="float-left m-2">
+        <h1 className="text-3xl">{eventDetails.title}</h1>
+        <h1 className="text-lg">{eventDetails.date.toUTCString()}</h1>
+      </div>
     </div>
   )
  }
@@ -36,7 +39,7 @@ interface EventsContent {
     const timeRanges: string[] = [TODAY, WEEK, NEXT_WEEK, MONTH, NEXT_MONTH, ALL]
 
     const timeCards = timeRanges.map((timeRange, index) => (
-        <div onClick={() => print(timeRange)} key={index} className="text-lg font-medium float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-200 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
+        <div onClick={() => print(timeRange)} key={index} className="text-lg font-medium select-none cursor-pointer float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-100 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
           {timeRange}</div>
       ));
 
