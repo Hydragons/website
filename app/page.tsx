@@ -15,7 +15,7 @@ function addDate(dateString: string) {
   return new Date(new Date(dateString).getTime() - NEW_YORK_OFFSET * 60 * 1000);
 }
 // const newYorkDate = new Date(utcDate.getTime() - newYorkOffset * 60 * 1000);
-var events: Event[] = [{title:"Discovery day", date:addDate("2023-09-21")}, {title:"DBoat Festival", date:addDate("2024-02-13")}]
+var events: Event[] = [{title:"Discovery day", date:addDate("2023-10-1")}, {title:"DBoat Festival", date:addDate("2024-02-13")}]
 
 export default function Home() {
   return (

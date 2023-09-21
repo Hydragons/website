@@ -8,10 +8,19 @@ function areDatesInSameWeek(date1: Date, date2: Date): boolean {
     const weekNumber2 = getWeekNumber(date2);
     const year2 = date2.getFullYear();
     
-    console.log(`year 1: ${year1} year2: ${year2}`)
-    console.log(`week 1: ${weekNumber1} week2: ${weekNumber2}`)
     // Check if the week numbers and years are the same
     return weekNumber1 === weekNumber2 && year1 === year2;
+}
+
+function isSecondDateOneWeekLater(date1: Date, date2:Date): boolean {
+    // Get the week number and year for each date
+    const weekNumber1 = getWeekNumber(date1);
+    const year1 = date1.getFullYear();
+    const weekNumber2 = getWeekNumber(date2);
+    const year2 = date2.getFullYear();
+    
+    // Check if the week numbers and years are the same
+    return (weekNumber1 + 1 === weekNumber2 && year1 === year2) || (weekNumber1 === 52 && weekNumber2 === 1 && year1 + 1 === year2);
 }
   
 // Helper function to get the ISO week number of a date
@@ -31,8 +40,22 @@ function getThisWeekEvents(events:Event[]): Event[] {
   return weekEvents
 }
 
+function getNextWeekEvents(events:Event[]): Event[] {
+  var today = new Date();
+  var returnEvents = [];
+  for(let event of events){
+    if(isSecondDateOneWeekLater(today, event.date))
+      returnEvents.push(event)
+  }
+  return returnEvents
+}
+
 export function getThisWeekEventCard(events: Event[]): JSX.Element[] {
   return getEventCard(getThisWeekEvents(events))
+}
+
+export function getNextWeekEventCard(events: Event[]): JSX.Element[] {
+    return getEventCard(getNextWeekEvents(events))
 }
 
 export function getEventCard(events: Event[]): JSX.Element[] {
