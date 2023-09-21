@@ -15,7 +15,22 @@ function addDate(dateString: string) {
   return new Date(new Date(dateString).getTime() - NEW_YORK_OFFSET * 60 * 1000);
 }
 // const newYorkDate = new Date(utcDate.getTime() - newYorkOffset * 60 * 1000);
-var events: Event[] = [{title:"Discovery day", date:addDate("2023-02-21")}, {title:"DBoat Festival", date:addDate("2023-10-13")}]
+var events: Event[] = [
+  // This week test
+  {title:"Discovery day", date:addDate("2023-09-23")},
+  {title:"Lachine Knockout", date:addDate("2023-09-25")},
+  // Next week test
+  {title:"Bat Can", date:addDate("2023-09-28")},
+  {title:"Montreal Challenge", date:addDate("2023-09-30")},
+  // Next month test  
+  {title:"Rawdon", date:addDate("2023-10-13")},
+  {title:"QCup", date:addDate("2023-10-13")},
+  {title:"Worlds Club Cruise", date:addDate("2023-10-13")},
+  // Next year test  
+  {title:"Nationals selection", date:addDate("2024-02-13")},
+  {title:"Paddle sale", date:addDate("2024-11-13")},
+  {title:"BBQ", date:addDate("2024-12-13")},
+]
 
 export default function Home() {
   return (
@@ -37,7 +52,7 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                <Iframe url="https://www.youtube.com/embed/zjvl02xac7s"
+                <Iframe url="https://www.youtube.com/embed/8q2dwN14hbI"
                 width="640px"
                 height="320px"
                 id=""

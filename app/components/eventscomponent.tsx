@@ -107,7 +107,7 @@ export default function EventsComponent(events: EventsContent) {
 
 
      return (
-           <div>
+           <div className="pb-2">
               <TimeSelector></TimeSelector>
               {possibleEvents[indexToDisplay].length < 1 ? (
               <h1 className="text-xl">Aucun événement</h1>
