@@ -1,58 +1,43 @@
-'use client';
-interface EventsContent {
-    events: Event[]
- }
+import {Event} from '../helper/interfaces'
+import EventCard from './eventcard';
 
- export interface Event {
-  title: string;
-  date: Date;
- }
+function areDatesInSameWeek(date1: Date, date2: Date): boolean {
+    // Get the week number and year for each date
+    const weekNumber1 = getWeekNumber(date1);
+    const year1 = date1.getFullYear();
+    const weekNumber2 = getWeekNumber(date2);
+    const year2 = date2.getFullYear();
+    
+    console.log(`year 1: ${year1} year2: ${year2}`)
+    console.log(`week 1: ${weekNumber1} week2: ${weekNumber2}`)
+    // Check if the week numbers and years are the same
+    return weekNumber1 === weekNumber2 && year1 === year2;
+}
+  
+// Helper function to get the ISO week number of a date
+function getWeekNumber(date: Date): number {
+  const yearStart = new Date(date.getFullYear(), 0, 1);
+  const days = Math.floor((date.getTime() - yearStart.getTime()) / (24 * 60 * 60 * 1000));
+  return Math.ceil((days + 1 + yearStart.getDay()) / 7);
+}
 
- function EventCard(eventDetails: Event){
-  return (
-    <div className="flow-root">
-      <div className="float-left m-2">
-        <h1 className="text-4xl">{eventDetails.date.getDate()}</h1>
-        <h1 className="text-lg font-light">{eventDetails.date.toLocaleString('default', {month: 'long' }).slice(0,3)}</h1>
-      </div>
-      <div className="float-left m-2">
-        <h1 className="text-3xl">{eventDetails.title}</h1>
-        <h1 className="text-lg">{eventDetails.date.toUTCString()}</h1>
-      </div>
-    </div>
-  )
- }
-
- export default function EventsComponent(events: EventsContent) {
-
-    function print(timeRange:string) {
-        console.log(`${timeRange}`)
-    }
-
-    const TODAY = "today";
-    const WEEK = "this week";
-    const NEXT_WEEK = "next week";
-    const MONTH = "this month";
-    const NEXT_MONTH = "next month";
-    const ALL = "all";
-
-    const timeRanges: string[] = [TODAY, WEEK, NEXT_WEEK, MONTH, NEXT_MONTH, ALL]
-
-    const timeCards = timeRanges.map((timeRange, index) => (
-        <div onClick={() => print(timeRange)} key={index} className="text-lg font-medium select-none cursor-pointer float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-100 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
-          {timeRange}</div>
-      ));
-
-    const eventCards = events.events.map((event, index) => (
-      <EventCard title={event.title} date={event.date}></EventCard>
-    ));
-
-     return (
-           <div>
-              <div className="flow-root">
-                  {timeCards}
-              </div>
-              {eventCards}
-           </div>
-          )
+function getThisWeekEvents(events:Event[]): Event[] {
+  var today = new Date();
+  var weekEvents = [];
+  for(let event of events){
+    if(areDatesInSameWeek(today, event.date))
+      weekEvents.push(event)
   }
+  return weekEvents
+}
+
+export function getThisWeekEventCard(events: Event[]): JSX.Element[] {
+  return getEventCard(getThisWeekEvents(events))
+}
+
+export function getEventCard(events: Event[]): JSX.Element[] {
+  var element = events.map((event, index) => (
+    <EventCard title={event.title} date={event.date}></EventCard>
+  ));
+  return element;
+}
