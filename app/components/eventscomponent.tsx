@@ -1,37 +1,70 @@
 'use client';
-import {EventsContent, Event} from '../helper/interfaces'
-import { getEventCard, getThisWeekEventCard, getNextWeekEventCard, getThisMonthEventCard, getNextMonthEventCard } from './eventsmanager';
-
-function TimeSelector() {
-  function print(timeRange:string) {
-      console.log(`${timeRange}`)
-  }
-  const WEEK = "this week";
-  const NEXT_WEEK = "next week";
-  const MONTH = "this month";
-  const NEXT_MONTH = "next month";
-  const ALL = "all";
-  
-  const timeRanges: string[] = [WEEK, NEXT_WEEK, MONTH, NEXT_MONTH, ALL]
-  
-  const timeCards = timeRanges.map((timeRange, index) => (
-      <div onClick={() => print(timeRange)} key={index} className="text-lg font-medium select-none cursor-pointer float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-100 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
-        {timeRange}</div>
-  ));
-
-  return (
-  <div className="flow-root">
-      {timeCards}
-  </div>
-  )
-}
+import {EventsContent} from '../helper/interfaces'
+import { getThisWeekEventCard, getNextWeekEventCard, getThisMonthEventCard, getNextMonthEventCard, getAllEventCard } from './eventsmanager';
+import React, { useState } from 'react'; // Import React and useState
 
 export default function EventsComponent(events: EventsContent) {
+  function TimeSelector() {
+    interface timeRangeSelector {
+      label: string;
+      getTimeRangeCard: () => void;
+    }
+  
+    function print(timeRange:string) {
+        console.log(`${timeRange}`)
+    }
+  
+    const WEEK = "this week";
+    const NEXT_WEEK = "next week";
+    const MONTH = "this month";
+    const NEXT_MONTH = "next month";
+    const ALL = "all";
     
-    const allEvents = getEventCard(events.events)
-    // const eventCards = events.events.map((event, index) => (
-    //   <EventCard title={event.title} date={event.date}></EventCard>
-    // ));
+    const timeRanges: timeRangeSelector[] = [
+      {
+        label: WEEK, 
+        getTimeRangeCard: () => {
+          renderThisWeekEvents()
+        }
+      },
+      {
+        label: NEXT_WEEK, 
+        getTimeRangeCard: () => {
+          renderNextWeekEvents();
+        }
+      },
+      {
+        label: MONTH, 
+        getTimeRangeCard: () => {
+          renderThisMonthEvents();
+        }
+      },
+      {
+        label: NEXT_MONTH, 
+        getTimeRangeCard: () => {
+          renderNextMonthEvents();
+        }
+      },
+      {
+        label: ALL, 
+        getTimeRangeCard: () => {
+          renderAllEvents();
+        }
+      },
+    ]
+    
+    const timeCards = timeRanges.map(({label, getTimeRangeCard}, index) => (
+        <div onClick={() => getTimeRangeCard()} key={index} className="text-lg font-medium select-none cursor-pointer float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-100 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
+          {label}</div>
+    ));
+  
+    return (
+    <div className="flow-root">
+        {timeCards}
+    </div>
+    )
+  }
+    var displayedEvents: JSX.Element[] = [];
 
     const weekEvents = getThisWeekEventCard(events.events)
 
@@ -41,18 +74,42 @@ export default function EventsComponent(events: EventsContent) {
 
     const nextMonthEvents = getNextMonthEventCard(events.events)
 
+    const allEvents = getAllEventCard(events.events)
+
+    const possibleEvents = [weekEvents, nextWeekEvents, thisMonthEvents, nextMonthEvents, allEvents]
+
+    
+    const [indexToDisplay, setIndexToDisplay] = useState(0); // Initialize indexToDisplay with state
+    function renderThisWeekEvents() {
+      setIndexToDisplay(0);
+      console.log(indexToDisplay);
+    }
+
+    function renderNextWeekEvents() {
+      setIndexToDisplay(1);
+      console.log(indexToDisplay);
+    }
+
+    function renderThisMonthEvents() {
+      setIndexToDisplay(2);
+      console.log(indexToDisplay);
+    }
+
+    function renderNextMonthEvents() {
+      setIndexToDisplay(3);
+      console.log(indexToDisplay);
+    }
+
+    function renderAllEvents() {
+      setIndexToDisplay(4);
+      console.log(indexToDisplay);
+    }
+
 
      return (
            <div>
               <TimeSelector></TimeSelector>
-              { nextMonthEvents }
-              {/* {thisMonthEvents} */}
-              {/* {weekEvents} */}
-              {/* {nextWeekEvents} */}
-              {/* {allEvents} */}
-              {/* 
-              {monthEvents}
-              {nextMonthEvents} */}
+              {possibleEvents[indexToDisplay]}
            </div>
           )
   }

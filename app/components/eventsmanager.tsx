@@ -87,28 +87,32 @@ function getNextMonthEvents(events:Event[]): Event[] {
     var returnEvents = [];
     for(let event of events){
       if(isSecondDateNextMonth(today, event.date))
-        returnEvents.push(event)
+        returnEvents.push(event);
     }
-    return returnEvents
+    return returnEvents;
 }
 
 export function getThisWeekEventCard(events: Event[]): JSX.Element[] {
-  return getEventCard(getThisWeekEvents(events))
+  return getEventCard(getThisWeekEvents(events));
 }
 
 export function getNextWeekEventCard(events: Event[]): JSX.Element[] {
-    return getEventCard(getNextWeekEvents(events))
+    return getEventCard(getNextWeekEvents(events));
 }
 
 export function getThisMonthEventCard(events: Event[]): JSX.Element[] {
-    return getEventCard(getThisMonthEvents(events))
+    return getEventCard(getThisMonthEvents(events));
 }
 
 export function getNextMonthEventCard(events: Event[]): JSX.Element[] {
-    return getEventCard(getNextMonthEvents(events))
+    return getEventCard(getNextMonthEvents(events));
 }
 
-export function getEventCard(events: Event[]): JSX.Element[] {
+export function getAllEventCard(events: Event[]): JSX.Element[] {
+    return getEventCard(events);
+}
+
+function getEventCard(events: Event[]): JSX.Element[] {
   var element = events.map((event, index) => (
     <EventCard title={event.title} date={event.date}></EventCard>
   ));
