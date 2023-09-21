@@ -1,6 +1,6 @@
 'use client';
 import {EventsContent, Event} from '../helper/interfaces'
-import { getEventCard, getThisWeekEventCard, getNextWeekEventCard } from './eventsmanager';
+import { getEventCard, getThisWeekEventCard, getNextWeekEventCard, getThisMonthEventCard, getNextMonthEventCard } from './eventsmanager';
 
 function TimeSelector() {
   function print(timeRange:string) {
@@ -37,9 +37,16 @@ export default function EventsComponent(events: EventsContent) {
 
     const nextWeekEvents = getNextWeekEventCard(events.events)
 
+    const thisMonthEvents = getThisMonthEventCard(events.events)
+
+    const nextMonthEvents = getNextMonthEventCard(events.events)
+
+
      return (
            <div>
               <TimeSelector></TimeSelector>
+              { nextMonthEvents }
+              {/* {thisMonthEvents} */}
               {/* {weekEvents} */}
               {/* {nextWeekEvents} */}
               {/* {allEvents} */}
