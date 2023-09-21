@@ -14,11 +14,11 @@ export default function EventsComponent(events: EventsContent) {
         console.log(`${timeRange}`)
     }
   
-    const WEEK = "this week";
-    const NEXT_WEEK = "next week";
-    const MONTH = "this month";
-    const NEXT_MONTH = "next month";
-    const ALL = "all";
+    const WEEK = "Cette semaine";
+    const NEXT_WEEK = "La semaine prochaine";
+    const MONTH = "Ce mois-ci";
+    const NEXT_MONTH = "Le mois prochain";
+    const ALL = "Tout";
     
     const timeRanges: timeRangeSelector[] = [
       {
@@ -109,7 +109,11 @@ export default function EventsComponent(events: EventsContent) {
      return (
            <div>
               <TimeSelector></TimeSelector>
-              {possibleEvents[indexToDisplay]}
+              {possibleEvents[indexToDisplay].length < 1 ? (
+              <h1 className="text-xl">Aucun événement</h1>
+            ) : (
+              possibleEvents[indexToDisplay]
+            )}
            </div>
           )
   }
