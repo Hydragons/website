@@ -4,7 +4,11 @@ export default function Home() {
     return (
         <div className='relative'>
             <div className='relative z-0 '>
-                <img src="imgs/contact_MainPic.jpg" className='brightness-75 w-full' alt="Accueil Image" />
+                <Image src="/imgs/contact_MainPic.jpg" className='brightness-75 w-full' alt="Accueil Image" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     CONTACTEZ-NOUS</h1>
             </div>
@@ -32,7 +36,7 @@ export default function Home() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="message" className="block mb-2"></label>
-                            <textarea id="message" name="message" rows="4" className=" w-full ml-auto block mb-3 rounded-lg border-udemBlue border-2 border-dashed " placeholder="Ton message..."></textarea>
+                            <textarea id="message" name="message" rows={4} className=" w-full ml-auto block mb-3 rounded-lg border-udemBlue border-2 border-dashed " placeholder="Ton message..."></textarea>
                         </div>
                         <button className="border-2 border-udemBlue text-udemBlue rounded-md p-2 place-self-center w-2/6 hover:bg-udemBlue hover:text-white active:scale-95 focus:outline-none transition-colors">
                             Envoyer
@@ -43,7 +47,11 @@ export default function Home() {
                     <script src="https://web3forms.com/client/script.js" async defer></script>
 
                 </div>
-                <img className='lg:max-w-xl sm:place-self-center lg:w-full md:place-self-center ' src="imgs/kaizenbanner.png" alt="Picture of UdeM Team" />
+                <Image className='lg:max-w-xl sm:place-self-center lg:w-full md:place-self-center ' src="/imgs/kaizenbanner.png" alt="Picture of UdeM Team" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <div></div>
 
             </div>

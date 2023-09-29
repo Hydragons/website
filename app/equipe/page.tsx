@@ -17,28 +17,44 @@ export default function Home() {
             <div className="flex flex-wrap pb-10">
                 <div className="w-full md:w-1/2 lg:w-1/4 p-4">
                     <h3 className='text-2xl text-udemBlue text-center font-medium'>Geoffrey Wang</h3>
-                    <img src="equipe/currentCap/GW.png" alt="photo de Geoffrey Wang" className='w-2/3 mx-auto p-5' />
+                    <Image src="/equipe/currentCap/GW.png" alt="photo de Geoffrey Wang" className='w-2/3 mx-auto p-5' 
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}/>
                     <p className='bg-gray-400 text-white w-2/3 mx-auto p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Itaque temporibus maiores omnis nulla soluta eos neque sunt laborum praesentium aspernatur dolores esse vel unde corporis
                         autem modi dolore, repellat incidunt!</p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 p-4">
                     <h3 className='text-2xl text-udemBlue text-center font-medium'>Eric Wang</h3>
-                    <img src="equipe/currentCap/EW.png" alt="photo de Eric Wang" className='w-2/3 mx-auto p-5' />
+                    <Image src="/equipe/currentCap/EW.png" alt="photo de Eric Wang" className='w-2/3 mx-auto p-5' 
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}/>
                     <p className='bg-gray-400 text-white w-2/3 mx-auto p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Itaque temporibus maiores omnis nulla soluta eos neque sunt laborum praesentium aspernatur dolores esse vel unde corporis
                         autem modi dolore, repellat incidunt!</p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 p-4">
                     <h3 className='text-2xl text-udemBlue text-center font-medium'>Alicia Nguy</h3>
-                    <img src="equipe/currentCap/AN.png" alt="photo de Alicia Nguy" className='w-2/3 mx-auto p-5' />
+                    <Image src="/equipe/currentCap/AN.png" alt="photo de Alicia Nguy" className='w-2/3 mx-auto p-5' 
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}/>
                     <p className='bg-gray-400 text-white w-2/3 mx-auto p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Itaque temporibus maiores omnis nulla soluta eos neque sunt laborum praesentium aspernatur dolores esse vel unde corporis
                         autem modi dolore, repellat incidunt!</p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 p-4">
                     <h3 className='text-2xl text-udemBlue text-center font-medium'>Liamos Nguyen</h3>
-                    <img src="equipe/currentCap/LN.png" alt="photo de Liamos Nguyen" className='w-2/3 mx-auto p-5' />
+                    <Image src="/equipe/currentCap/LN.png" alt="photo de Liamos Nguyen" className='w-2/3 mx-auto p-5' 
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}/>
                     <p className='bg-gray-400 text-white w-2/3 mx-auto p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Itaque temporibus maiores omnis nulla soluta eos neque sunt laborum praesentium aspernatur dolores esse vel unde corporis
                         autem modi dolore, repellat incidunt!</p>
@@ -52,14 +68,22 @@ export default function Home() {
                 <div className='grid lg:grid-cols-2 gap-10 pb-10 sm:grid-cols-none md:grid-cols-none'>
                     <div className='pb-5'>
                         <h3 className='text-2xl text-udemBlue text-center font-medium'>Zee </h3>
-                        <img src="equipe/currentCap/Z.png" alt="photo de Zee" className='h-2/3 mx-auto p-5' />
+                        <Image src="/equipe/currentCap/Z.png" alt="photo de Zee" className='h-2/3 mx-auto p-5' 
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}/>
                         <p className='bg-gray-400 text-white w-2/3 mx-auto p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Itaque temporibus maiores omnis nulla soluta eos neque sunt laborum praesentium aspernatur dolores esse vel unde corporis
                             autem modi dolore, repellat incidunt!</p>
                     </div>
                     <div className='pb-5'>
                         <h3 className='text-2xl text-udemBlue text-center font-medium'>Bernadette</h3>
-                        <img src="equipe/currentCap/B.png" alt="photo de Bernadette" className='h-2/3 mx-auto p-5' />
+                        <Image src="/equipe/currentCap/B.png" alt="photo de Bernadette" className='h-2/3 mx-auto p-5' 
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}/>
                         <p className='bg-gray-400 text-white w-2/3 mx-auto p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Itaque temporibus maiores omnis nulla soluta eos neque sunt laborum praesentium aspernatur dolores esse vel unde corporis
                             autem modi dolore, repellat incidunt!</p>

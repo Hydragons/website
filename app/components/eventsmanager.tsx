@@ -114,7 +114,7 @@ export function getAllEventCard(events: Event[]): JSX.Element[] {
 
 function getEventCard(events: Event[]): JSX.Element[] {
   var element = events.map((event, index) => (
-    <EventCard title={event.title} date={event.date}></EventCard>
+    <EventCard key={index} title={event.title} date={event.date}></EventCard>
   ));
   return element;
 }

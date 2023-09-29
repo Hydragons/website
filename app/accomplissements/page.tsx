@@ -4,7 +4,14 @@ export default function Home() {
     return (
         <div>
             <div className='relative z-0 '>
-                <img src="imgs/accomplissements_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
+                <Image 
+                    src="/imgs/accomplissements_MainPic.jpg" 
+                    className='brightness-75' 
+                    alt="Accueil Image" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     ACCOMPLISSEMENTS</h1>
             </div>
@@ -17,7 +24,11 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <img src="comp/summer2023/LKO.jpg" alt="LKO image" className='border-4 border-udemLightBlue border-solid' />
+                    <Image src="/comp/summer2023/LKO.jpg" alt="LKO image" className='border-4 border-udemLightBlue border-solid' 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 </div>
 
                 <div className='text-left lg:mr-auto lg:my-auto md:mx-0 mx-0 md:ml-10 ml-10 pb-10 '>
@@ -35,7 +46,11 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <img src="comp/summer2023/BC.png" alt="Battle at the Canal image" className='border-4 border-udemLightBlue border-solid' />
+                    <Image src="/comp/summer2023/BC.png" alt="Battle at the Canal image" className='border-4 border-udemLightBlue border-solid' 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 </div>
 
                 <div className='text-left lg:mr-auto lg:my-auto md:mx-0 mx-0 md:ml-10 ml-10 pb-10 '>
@@ -54,7 +69,11 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <img src="comp/summer2023/MC.JPG" alt="Montreal Challenge image" className='border-4 border-udemLightBlue border-solid' />
+                    <Image src="/comp/summer2023/MC.JPG" alt="Montreal Challenge image" className='border-4 border-udemLightBlue border-solid' 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 </div>
 
                 <div className='text-left lg:mr-auto lg:my-auto md:mx-0 mx-0 md:ml-10 ml-10 pb-10 '>
@@ -90,7 +109,11 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
                 <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <img src="comp/summer2023/Rawdon.png" alt="Rawdon image" className='border-4 border-udemLightBlue border-solid' />
+                    <Image src="/comp/summer2023/Rawdon.png" alt="Rawdon image" className='border-4 border-udemLightBlue border-solid' 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 </div>
 
                 <div className='text-left lg:mr-auto lg:my-auto md:mx-0 mx-0 md:ml-10 ml-10 pb-10 '>
