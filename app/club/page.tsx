@@ -1,6 +1,7 @@
 "use client"
 import Map from './map.js';
 import './map.css';
+import Image from 'next/image'
 
 
 export default function Home() {
@@ -8,7 +9,11 @@ export default function Home() {
     return (
         <div>
             <div className='relative z-0 '>
-                <img src="imgs/rejoindre_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
+                <Image src="/imgs/rejoindre_MainPic.jpg" className='brightness-75' alt="Accueil Image" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <h1 className="absolute uppercase lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     le club</h1>
             </div>
@@ -78,14 +83,22 @@ export default function Home() {
                 <div className='grid lg:grid-cols-2 gap-10 pb-10 sm:grid-cols-none md:grid-cols-none'>
                     <div>
                         <h3 className='text-xl uppercase text-udemBlue text-center'>au bassin intérieur</h3>
-                        <img src="practices/intpractice.jpeg" alt="Photo du lieu de pratique intérieure" className='aspect-square w-2/3 mx-auto p-5' />
+                        <Image src="/practices/intpractice.jpeg" alt="Photo du lieu de pratique intérieure" className='aspect-square w-2/3 mx-auto p-5' 
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}/>
                         <p className='text-left w-2/3 mx-auto'>En Hiver, .... Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Libero architecto quidem necessitatibus, veniam ipsam odio sequi similique omnis ut voluptas vel moles
                             tias suscipit voluptatibus repellendus neque. Accusamus voluptate reiciendis eveniet?</p>
                     </div>
                     <div>
                         <h3 className='text-xl uppercase text-udemBlue text-center'>au Canal de Lachine</h3>
-                        <img src="practices/extpractice.png" alt="Photo du lieu de pratique intérieure" className='aspect-square w-2/3 mx-auto p-5' />
+                        <Image src="/practices/extpractice.png" alt="Photo du lieu de pratique intérieure" className='aspect-square w-2/3 mx-auto p-5' 
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}/>
                         <p className='text-left w-2/3 mx-auto'>En ete, .... Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Libero architecto quidem necessitatibus, veniam ipsam odio sequi similique omnis ut voluptas vel moles
                             tias suscipit voluptatibus repellendus neque. Accusamus voluptate reiciendis eveniet?</p>
