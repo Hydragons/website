@@ -58,13 +58,13 @@ export default function Home() {
                 <div className='text-left lg:mx-auto mx-0 md:ml-10 ml-10 sm:pb-10'>
                     <h3 className='pb-5 text-xl uppercase text-summer'>Saison Été</h3>
                     <ul className='list-disc marker:text-summer pl-5'><li className='pb-5 '>Adresse: </li>
-                        <li className='pb-5'>Heures d'ouverture: </li>
+                        <li className='pb-5'>Heures d&apos;ouverture: </li>
                         <li className='pb-5'>Stationnement: </li>
                     </ul>
 
                     <h3 className='pb-5 text-xl uppercase text-winter'>Saison Hiver</h3>
                     <ul className='list-disc marker:text-winter pl-5'><li className='pb-5 '>Adresse: </li>
-                        <li className='pb-5'>Heures d'ouverture: </li>
+                        <li className='pb-5'>Heures d&apos;ouverture: </li>
                         <li className='pb-5'>Stationnement: </li>
                     </ul>
 

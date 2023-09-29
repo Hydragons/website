@@ -42,7 +42,7 @@ export default function Home() {
                     sizes="100vw"
                     style={{ width: '100%', height: 'auto' }}/>
         <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
-          CLUB DE BATEAU DRAGON DE L'UNIVERSITÉ DE MONTRÉAL</h1>
+          CLUB DE BATEAU DRAGON DE L&apos;UNIVERSITÉ DE MONTRÉAL</h1>
       </div>
 
       <div className="inline-flex items-center justify-center w-full py-10">
@@ -77,7 +77,7 @@ export default function Home() {
             <div className='grid lg:grid-cols-2 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
 
               <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
-                    <h3 className={`${quote.className} ${quote.style} text-4xl pb-2`}>DON'T BE A SHEEP, BE AN UNDERDOG.</h3>
+                    <h3 className={`${quote.className} ${quote.style} text-4xl pb-2`}>DON&apos;T BE A SHEEP, BE AN UNDERDOG.</h3>
                     <h4 className='pb-5 text-xl ml-10 italic'>-Alicia Nguy, Capitaine 2023</h4>
               </div>
 

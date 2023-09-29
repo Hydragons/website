@@ -7,6 +7,7 @@ import Link from "next/link"
 import { useEffect, useState } from 'react'
 import { usePathname } from "next/navigation"
 import Head from 'next/head'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,8 +29,12 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
         <nav className=" bg-udemBlue lg:bg-opacity-70 bg-opacity-95 absolute z-10 w-full">
           <div className="flex flex-wrap">
 
-            <div id="logoAndName" className="flex items-center pl-8">
-              <img src="imgs/udemLogo.png" className='h-12 w-15 pr-5' alt="UDEM Dragonboat logo" />
+            <div id="logoAndName" className="flex items-center pl-8 pr-0">
+              <Image src="/imgs/udemLogo.png" className='h-12 w-15 pr-5' alt="UDEM Dragonboat logo" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '10%', height: 'auto' }}/>
               <span className="self-center text-xl font-normal whitespace-nowrap text-white tracking-tight">HYDRAGONS</span>
             </div>
 
