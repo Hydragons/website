@@ -4,7 +4,11 @@ export default function Home() {
     return (
         <div className='relative'>
             <div className='relative z-0 '>
-                <img src="imgs/contact_MainPic.jpg" className='brightness-75 w-full' alt="Accueil Image" />
+                <Image src="/imgs/contact_MainPic.jpg" className='brightness-75 w-full' alt="Accueil Image" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     CONTACTEZ-NOUS</h1>
             </div>
@@ -43,7 +47,11 @@ export default function Home() {
                     <script src="https://web3forms.com/client/script.js" async defer></script>
 
                 </div>
-                <img className='lg:max-w-xl sm:place-self-center lg:w-full md:place-self-center ' src="imgs/kaizenbanner.png" alt="Picture of UdeM Team" />
+                <Image className='lg:max-w-xl sm:place-self-center lg:w-full md:place-self-center ' src="/imgs/kaizenbanner.png" alt="Picture of UdeM Team" 
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <div></div>
 
             </div>
