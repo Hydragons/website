@@ -32,7 +32,7 @@ export default function Home() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="message" className="block mb-2"></label>
-                            <textarea id="message" name="message" rows="4" className=" w-full ml-auto block mb-3 rounded-lg border-udemBlue border-2 border-dashed " placeholder="Ton message..."></textarea>
+                            <textarea id="message" name="message" rows={4} className=" w-full ml-auto block mb-3 rounded-lg border-udemBlue border-2 border-dashed " placeholder="Ton message..."></textarea>
                         </div>
                         <button className="border-2 border-udemBlue text-udemBlue rounded-md p-2 place-self-center w-2/6 hover:bg-udemBlue hover:text-white active:scale-95 focus:outline-none transition-colors">
                             Envoyer
