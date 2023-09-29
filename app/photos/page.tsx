@@ -10,7 +10,10 @@ export default function Home() {
 
         <div>
             <div className='relative z-0 '>
-                <img src="imgs/photos_MainPic.jpg" className='brightness-75' alt="Accueil Image" />
+                <Image src="/imgs/photos_MainPic.jpg" className='brightness-75' alt="Accueil Image" width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}/>
                 <h1 className="absolute lg:text-6xl md:text-5xl sm:text-3xl text-white top-1/4 right-1/4 left-1/4 text-center tracking-tight">
                     PHOTOS</h1>
             </div>
@@ -22,30 +25,50 @@ export default function Home() {
                     <span className="absolute px-3 text-center uppercase text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl -translate-x-1/2 bg-white left-1/2 ">saison été 2023</span>
                 </div>
                 <Carousel className="rounded-xl flex items-center w-1/2 mx-auto max-w-md pt-5" loop={true}>
-                    <img
-                        src="carousel/summer2023/item1.jpg"
+                    <Image
+                        src="/carousel/summer2023/item1.jpg"
                         alt="image 1"
                         className="w-full h-full"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                     />
-                    <img
-                        src="carousel/summer2023/item2.JPG"
+                    <Image
+                        src="/carousel/summer2023/item2.JPG"
                         alt="image 2"
                         className="w-full h-full"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                     />
-                    <img
-                        src="carousel/summer2023/item3.JPG"
+                    <Image
+                        src="/carousel/summer2023/item3.JPG"
                         alt="image 3"
                         className="w-full h-full"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                     />
-                    <img
-                        src="carousel/summer2023/item4.JPG"
+                    <Image
+                        src="/carousel/summer2023/item4.JPG"
                         alt="image 4"
                         className="w-full h-full"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                     />
-                    <img
-                        src="carousel/summer2023/item5.JPG"
+                    <Image
+                        src="/carousel/summer2023/item5.JPG"
                         alt="image 5"
                         className="w-full h-full"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                     />
 
                 </Carousel>
