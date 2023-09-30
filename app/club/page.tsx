@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 
 export default function Home() {
-
+    const API_URL = process.env.NEXT_PUBLIC_API_URL
     return (
         <div>
             <div className='relative z-0 '>
@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
 
                 <div className='max-h-[500px] lg:mx-0 md:mx-0 mx-auto'>
-                    <Map />
+                    <Map ApiUrlWithKey={API_URL}/>
                 </div>
             </div>
 
