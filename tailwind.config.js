@@ -11,6 +11,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      grayscale: {
+        50: '50%',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -39,7 +42,7 @@ module.exports = withMT({
     },
 
     colors: {
-      'udemBlue': '#06609D',
+      'udemBlue': '#0F3B7D',
       'white': '#ffffff',
       'udemLightBlue': '#aecbeb',
       'currentPage': '#71bedc',

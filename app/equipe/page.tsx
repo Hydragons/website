@@ -95,7 +95,7 @@ export default function Home() {
 
 
             <div className='w-full lg:px-32 md:px-24 sm:px-10 pb-16'>
-                <h2 className='text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl mb-2 uppercase pb-5 text-center'>les rammeurs</h2>
+                <h2 className='text-udemBlue font-semibold lg:text-3xl md:text-2xl text-xl mb-2 uppercase pb-5 text-center'>les pagayeurs</h2>
 
                 <h3 className='text-udemBlue font-medium lg:text-2xl md:text-xl text-lg mb-2 uppercase pb-5 pl-5'>saison été 2023</h3>
 
@@ -110,7 +110,7 @@ export default function Home() {
 
                 </div>
 
-                <h4 className='text-udemBlue lg:text-xl md:text-lg text-md mb-2 pl-10'>Les rammeurs</h4>
+                <h4 className='text-udemBlue lg:text-xl md:text-lg text-md mb-2 pl-10'>Les pagayeurs</h4>
                 <div className="flex flex-wrap pb-10">
                     <div className="w-full md:w-1/2 lg:w-1/4 p-4">
                         <ul className='pl-5 ml-14'>

@@ -26,16 +26,20 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
       </Head>
 
       <body>
-        <nav className=" bg-udemBlue lg:bg-opacity-70 bg-opacity-95 absolute z-10 w-full">
+        <nav className=" bg-udemBlue absolute z-10 w-full">
           <div className="flex flex-wrap">
 
             <div id="logoAndName" className="flex items-center pl-8 pr-0">
-              <Image src="/imgs/udemLogo.png" className='h-12 w-15 pr-5' alt="UDEM Dragonboat logo" 
-                    width={0}
-                    height={0}
+              <Link href="/">
+                <div className="hover:cursor-pointer">
+                  <Image src="/imgs/udem_dboat_logo.png" className=' hover:cursor-pointer' alt="UDEM Dragonboat logo"
+                    width={15}
+                    height={12}
                     sizes="100vw"
-                    style={{ width: '10%', height: 'auto' }}/>
-              <span className="self-center text-xl font-normal whitespace-nowrap text-white tracking-tight">HYDRAGONS</span>
+                    style={{ width: '30%', height: '12' }} />
+                </div>
+              </Link>
+
             </div>
 
             <button data-collapse-toggle="navbar-default" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto" aria-controls="navbar-default" aria-expanded="false">
@@ -46,7 +50,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
             <div className={`w-full lg:block lg:w-auto ml-auto flex ${isMenuOpen ? "" : "hidden"}`}>
 
-              <ul className="flex lg:flex-row lg:text-lg lg:ml-auto
+              <ul className="flex lg:flex-row lg:text-base lg:ml-auto
               md:flex-col md:mx-auto md:text-center md:text-sm md:mr-auto
               flex-col mx-auto text-center text-base mr-auto
               text-white font-normal whitespace-nowrap py-4 pr-8" onClick={() => setIsMenuOpen(!isMenuOpen)}>
