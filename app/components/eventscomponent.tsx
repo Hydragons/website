@@ -54,7 +54,7 @@ export default function EventsComponent(events: EventsContent) {
     ]
     
     const timeCards = timeRanges.map(({label, getTimeRangeCard}, index) => (
-        <div onClick={() => getTimeRangeCard()} key={index} className="text-lg font-medium select-none cursor-pointer float-left m-2 border border-gray-400 rounded-full p-2 hover:bg-gray-100 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
+        <div onClick={() => getTimeRangeCard()} key={index} className="text-md transition font-base select-none cursor-pointer float-left m-2 border border-gray-400 rounded-full py-2 px-3 hover:bg-gray-100 active:bg-blue-50 active:text-blue-700 focus:outline-none focus:ring focus:ring-purple-300 ...">
           {label}</div>
     ));
   
@@ -107,10 +107,10 @@ export default function EventsComponent(events: EventsContent) {
 
 
      return (
-           <div className="pb-2">
+           <div className="pb-10">
               <TimeSelector></TimeSelector>
               {possibleEvents[indexToDisplay].length < 1 ? (
-              <h1 className="text-xl">Aucun événement</h1>
+              <h1 className="text-xl pb-10 pt-5 text-center font-light">Aucun événement</h1>
             ) : (
               possibleEvents[indexToDisplay]
             )}

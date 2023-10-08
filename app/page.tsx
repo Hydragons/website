@@ -46,10 +46,9 @@ export default function Home() {
           club sportif bateau dragon de l'université de montréal</h1>
       </div>
 
-      <div className="inline-flex items-center justify-center w-full pt-10 pb-4">
-        <hr className="w-1/4 h-1 my-8 border-0  bg-udemLightBlue" />
-        <span className="absolute px-3 text-center uppercase text-udemBlue font-semibold lg:text-2xl md:text-xl text-lg -translate-x-1/2 bg-white left-1/2 ">
-          À PROPOS DU BATEAU DRAGON
+      <div className="inline-flex items-center justify-center w-full pt-10 pb-10">
+        <span className="absolute uppercase px-3 text-center text-udemBlue font-semibold lg:text-2xl md:text-xl text-lg -translate-x-1/2 bg-white left-1/2 ">
+          à propos du bateau dragon
         </span>
       </div>
 
@@ -66,8 +65,10 @@ export default function Home() {
             position="relative" />
         </div>
 
-        <div className='text-left lmx-auto my-auto pb-10 w-2/3'>
+        <div className='text-left my-auto pb-10 w-2/3'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec ligula lectus. In euismod elementum sapien in porttitor. In pulvinar, diam eu suscipit aliquam, purus ex dignissim lectus, nec rutrum metus est vel sapien. Nulla ut velit dictum odio eleifend suscipit. Donec eget nibh erat. Proin ultricies varius enim. In sit amet sagittis arcu, in sodales nunc. Duis non nibh aliquet, condimentum neque eu, laoreet justo. Maecenas et eleifend lacus, ac convallis dui.
+          <a href="/club" className=' text-udemBlue hover:text-light-blue-700'> En savoir plus...</a>
+        
         </div>
 
       </div>
@@ -79,7 +80,7 @@ export default function Home() {
 
         <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
           <h3 className={`${quote.className} ${quote.style} lg:text-3xl md:text-2xl sm:text-lg pb-2`}>DON&apos;T BE A SHEEP, BE AN UNDERDOG.</h3>
-          <h4 className='pb-5 text-xl ml-10 italic'>-Alicia Nguy, Capitaine 2023</h4>
+          <h4 className='text-xl ml-10 italic'>-Alicia Nguy, Capitaine 2023</h4>
         </div>
 
         <div className='pl-10 w-2/3'>
@@ -96,8 +97,8 @@ export default function Home() {
       {/* Add events here */}
 
       <div className="flex flex-col items-center justify-center">
-        <h3 className="text-udemBlue font-semibold lg:text-2xl md:text-xl text-lg bg-white pb-3">
-          ÉVÉNEMENTS À VENIR
+        <h3 className="text-udemBlue font-semibold lg:text-2xl md:text-xl text-lg uppercase bg-white pb-4">
+          événements à venir
         </h3>
         <EventsComponent events={events}></EventsComponent>
       </div>
