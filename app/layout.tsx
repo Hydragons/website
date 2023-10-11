@@ -73,7 +73,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                 </li>
                 <li>
                   <Link href="/photos" className={`${pathname === '/photos' ? 'text-udemLightBlue' : 'text-white'} block py-2 px-4 hover:text-udemLightBlue transition`}>
-                    PHOTOS
+                    GALERIE PHOTOS
                   </Link>
                 </li>
                 <li>
@@ -92,7 +92,8 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           <div className="container mx-auto my-5 px-4">
             <div className="flex flex-wrap text-left">
               <div className="w-full lg:w-6/12 px-4 flex flex-col items-center">
-                <h4 className="text-2xl font-semibold text-white pb-2">Intéressé(e) à rejoindre l’équipe?</h4>
+
+                <h4 className="lg:text-2xl md:text-xl text-lg font-semibold text-white pb-2">Intéressé(e) à rejoindre l’équipe?</h4>
                 <Link href="/contact" >
                   <button className="mt-2 bg-transparent border-2 border-white text-white py-2 px-4 rounded-2xl transition-colors hover:bg-white hover:text-udemBlue active:scale-95 focus:outline-none">
                     Contactez-nous

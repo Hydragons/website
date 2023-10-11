@@ -1,6 +1,7 @@
 { import('tailwindcss').Config }
 
 const withMT = require("@material-tailwind/react/utils/withMT");
+
 module.exports = withMT({
 
   content: [
@@ -50,7 +51,8 @@ module.exports = withMT({
       'summer': '#ff6600',
       'winter': '#68BBE3',
 
-    }
+    },
+    
   },
   plugins: [
   ],

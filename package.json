@@ -11,6 +11,9 @@
   "dependencies": {
     "@coreui/coreui": "^5.0.0-alpha.1",
     "@coreui/react": "^5.0.0-alpha.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-tailwind/react": "^2.1.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",

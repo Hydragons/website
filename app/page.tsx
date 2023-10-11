@@ -37,7 +37,7 @@ export default function Home() {
     <div>
       <div className='relative z-0'>
 
-        <Image src="/imgs/main_pic.png" className='brightness-75 ' alt="Accueil Image"
+        <Image src="/imgs/firstmainpic.png" className='brightness-75 ' alt="Accueil Image"
           width={0}
           height={0}
           sizes="100vw"
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
       <div className="inline-flex items-center justify-center w-full pt-10 pb-10">
-        <span className="absolute uppercase px-3 text-center text-udemBlue font-semibold lg:text-2xl md:text-xl text-lg -translate-x-1/2 bg-white left-1/2 ">
+        <span className="absolute uppercase px-3 text-center text-udemBlue font-semibold lg:text-2xl md:text-xl text-lg bg-white">
           à propos du bateau dragon
         </span>
       </div>
@@ -65,7 +65,7 @@ export default function Home() {
             position="relative" />
         </div>
 
-        <div className='text-left my-auto pb-10 w-2/3'>
+        <div className='text-left my-auto pb-10 w-2/3 mx-auto md:mx-0'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec ligula lectus. In euismod elementum sapien in porttitor. In pulvinar, diam eu suscipit aliquam, purus ex dignissim lectus, nec rutrum metus est vel sapien. Nulla ut velit dictum odio eleifend suscipit. Donec eget nibh erat. Proin ultricies varius enim. In sit amet sagittis arcu, in sodales nunc. Duis non nibh aliquet, condimentum neque eu, laoreet justo. Maecenas et eleifend lacus, ac convallis dui.
           <a href="/club" className=' text-udemBlue hover:text-light-blue-700'> En savoir plus...</a>
         
@@ -76,7 +76,7 @@ export default function Home() {
       <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto md:block lg:block" />
 
       {/* Add quote here */}
-      <div className='grid lg:grid-cols-2 px-10 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5'>
+      <div className='grid lg:grid-cols-2 px-10 lg:pb-16 grid-cols-none md:grid-cols-2 md:pb-10 pd-5 pb-10'>
 
         <div className='w-2/3 place-self-center lg:ml-auto md:ml-auto ml-0 pb-10'>
           <h3 className={`${quote.className} ${quote.style} lg:text-3xl md:text-2xl sm:text-lg pb-2`}>DON&apos;T BE A SHEEP, BE AN UNDERDOG.</h3>
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
       </div>
 
-      <hr className="pb-16 border-udemLightBlue w-2/3  mx-auto md:block lg:block" />
+      <hr className="p-16 border-udemLightBlue w-2/3  mx-auto md:block lg:block" />
 
       {/* Add events here */}
 
